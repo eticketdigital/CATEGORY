@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brian McKnight Live In Medan - Ticket Categories</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#07142f;
+    background-image:
+    radial-gradient(circle at top left,#1a4fa3 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#2a0e58 0%,transparent 35%);
+    color:#fff;
+    min-height:100vh;
+}
+
+.container{
+    width:95%;
+    max-width:1300px;
+    margin:auto;
+    padding:40px 0;
+}
+
+/* HEADER */
+.hero{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.hero h1{
+    font-size:48px;
+    font-weight:800;
+    letter-spacing:2px;
+    text-transform:uppercase;
+}
+
+.hero h2{
+    font-size:22px;
+    font-weight:400;
+    margin-top:8px;
+    opacity:.9;
+}
+
+.hero .event-date{
+    display:inline-block;
+    margin-top:20px;
+    background:#0f2352;
+    padding:12px 25px;
+    border-radius:12px;
+    font-weight:600;
+    border:1px solid rgba(255,255,255,.15);
+}
+
+/* GRID */
+.ticket-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+/* CARD */
+.ticket-card{
+    position:relative;
+    border-radius:24px;
+    overflow:hidden;
+    padding:25px;
+    transition:.3s;
+    box-shadow:0 10px 30px rgba(0,0,0,.3);
+}
+
+.ticket-card:hover{
+    transform:translateY(-8px);
+}
+
+.ticket-card h3{
+    font-size:28px;
+    margin-bottom:8px;
+    font-weight:700;
+}
+
+.price{
+    font-size:34px;
+    font-weight:800;
+    margin-bottom:20px;
+}
+
+.features{
+    list-style:none;
+    margin-bottom:25px;
+}
+
+.features li{
+    margin-bottom:10px;
+    font-size:14px;
+    display:flex;
+    align-items:center;
+}
+
+.features li::before{
+    content:"✓";
+    margin-right:10px;
+    font-weight:bold;
+}
+
+.buy-btn{
+    width:100%;
+    border:none;
+    padding:14px;
+    border-radius:12px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.buy-btn:hover{
+    transform:scale(1.03);
+}
+
+.badge{
+    position:absolute;
+    top:15px;
+    right:15px;
+    background:rgba(255,255,255,.2);
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:600;
+}
+
+/* CATEGORY COLORS */
+
+.vip{
+    background:linear-gradient(135deg,#8d0000,#cf1212);
+}
+.vip .buy-btn{
+    background:#fff;
+    color:#b00000;
+}
+
+.platinum{
+    background:linear-gradient(135deg,#4d1d95,#7a3cff);
+}
+.platinum .buy-btn{
+    background:#fff;
+    color:#5b2ab8;
+}
+
+.gold{
+    background:linear-gradient(135deg,#8a6200,#d9a200);
+}
+.gold .buy-btn{
+    background:#fff;
+    color:#a77700;
+}
+
+.silver{
+    background:linear-gradient(135deg,#7b7b88,#b4b4c2);
+}
+.silver .buy-btn{
+    background:#fff;
+    color:#555;
+}
+
+.bronze{
+    background:linear-gradient(135deg,#9c5fd1,#bf82f0);
+}
+.bronze .buy-btn{
+    background:#fff;
+    color:#8a49c6;
+}
+
+/* INFO SECTION */
+.info-section{
+    margin-top:60px;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.info-box{
+    background:rgba(255,255,255,.08);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.1);
+    padding:30px;
+    border-radius:20px;
+}
+
+.info-box h3{
+    margin-bottom:20px;
+    font-size:22px;
+}
+
+.info-box ul{
+    padding-left:20px;
+}
+
+.info-box li{
+    margin-bottom:12px;
+    line-height:1.6;
+}
+
+.footer{
+    margin-top:40px;
+    text-align:center;
+    opacity:.7;
+    font-size:14px;
+}
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:32px;
+}
+
+.hero h2{
+    font-size:18px;
+}
+
+.info-section{
+    grid-template-columns:1fr;
+}
+
+.price{
+    font-size:28px;
+}
+
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="hero">
+        <h1>BRIAN McKNIGHT</h1>
+        <h2>Live In Medan • Featuring Raisa</h2>
+
+        <div class="event-date">
+            📅 12 JULI • 📍 SELECTA CONVENTION HALL MEDAN
+        </div>
+    </div>
+
+    <div class="ticket-grid">
+
+        <!-- VIP -->
+        <div class="ticket-card vip">
+            <div class="badge">LIMITED</div>
+            <h3>VIP</h3>
+            <div class="price">Rp 2.175.000</div>
+
+            <ul class="features">
+                <li>Area Terdepan</li>
+                <li>Akses VIP Eksklusif</li>
+                <li>Priority Check-in</li>
+                <li>View Terbaik ke Panggung</li>
+                <li>Meet & Greet*</li>
+            </ul>
+
+            <button class="buy-btn">
+                BELI TIKET VIP
+            </button>
+        </div>
+
+        <!-- PLATINUM -->
+        <div class="ticket-card platinum">
+            <div class="badge">POPULAR</div>
+            <h3>PLATINUM</h3>
+            <div class="price">Rp 1.700.000</div>
+
+            <ul class="features">
+                <li>Area Premium</li>
+                <li>Dekat Panggung</li>
+                <li>View Sangat Baik</li>
+                <li>Jalur Masuk Platinum</li>
+                <li>Kapasitas Terbatas</li>
+            </ul>
+
+            <button class="buy-btn">
+                BELI TIKET PLATINUM
+            </button>
+        </div>
+
+        <!-- GOLD -->
+        <div class="ticket-card gold">
+            <h3>GOLD</h3>
+            <div class="price">Rp 1.300.000</div>
+
+            <ul class="features">
+                <li>Area Tengah</li>
+                <li>View Panggung Nyaman</li>
+                <li>Harga Favorit Penonton</li>
+                <li>Akses Area Gold</li>
+                <li>Kapasitas Reguler</li>
+            </ul>
+
+            <button class="buy-btn">
+                BELI TIKET GOLD
+            </button>
+        </div>
+
+        <!-- SILVER -->
+        <div class="ticket-card silver">
+            <h3>SILVER</h3>
+            <div class="price">Rp 870.000</div>
+
+            <ul class="features">
+                <li>Area Reguler</li>
+                <li>Pemandangan Panggung Baik</li>
+                <li>Harga Lebih Terjangkau</li>
+                <li>Akses Area Silver</li>
+                <li>Cocok Untuk Semua Penonton</li>
+            </ul>
+
+            <button class="buy-btn">
+                BELI TIKET SILVER
+            </button>
+        </div>
+
+        <!-- BRONZE -->
+        <div class="ticket-card bronze">
+            <h3>BRONZE</h3>
+            <div class="price">Rp 650.000</div>
+
+            <ul class="features">
+                <li>Kategori Ekonomis</li>
+                <li>Area Reguler</li>
+                <li>Menikmati Keseluruhan Konser</li>
+                <li>Akses Area Bronze</li>
+                <li>Harga Paling Terjangkau</li>
+            </ul>
+
+            <button class="buy-btn">
+                BELI TIKET BRONZE
+            </button>
+        </div>
+
+    </div>
+
+    <div class="info-section">
+
+        <div class="info-box">
+            <h3>📍 Informasi Acara</h3>
+
+            <ul>
+                <li><strong>Event :</strong> Brian McKnight Live In Medan</li>
+                <li><strong>Guest Star :</strong> Raisa</li>
+                <li><strong>Tanggal :</strong> 12 Juli</li>
+                <li><strong>Venue :</strong> Selecta Convention Hall Medan</li>
+                <li><strong>Promotor :</strong> MEG Entertainment</li>
+            </ul>
+        </div>
+
+        <div class="info-box">
+            <h3>📋 Syarat & Ketentuan</h3>
+
+            <ul>
+                <li>Tiket hanya dijual melalui partner resmi promotor.</li>
+                <li>Harga belum termasuk PPN 10% dan biaya platform.</li>
+                <li>Maksimal pembelian 5 tiket per transaksi per kategori.</li>
+                <li>Nama tiket harus sesuai identitas resmi (KTP/SIM/Paspor).</li>
+                <li>Penonton hanya dapat memasuki area sesuai kategori tiket.</li>
+                <li>Refund mengikuti kebijakan promotor apabila acara dibatalkan.</li>
+                <li>Meet & Greet hanya berlaku untuk 30 pembeli VIP pertama.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        © 2025 Brian McKnight Live In Medan • Official Ticketing Page
+    </div>
+
+</div>
+
+</body>
+</html>
